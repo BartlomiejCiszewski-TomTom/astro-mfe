@@ -1,0 +1,14 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Test from './_React.tsx';
+---
+
+<Layout title="Welcome to Astro.">
+	<h1>Developer portal</h1>
+	<div>Some devportal content goes here</div>
+	<div>
+		<h2>Microfrontend component:</h2>
+		<Test client:only />
+	</div>
+</Layout>
+

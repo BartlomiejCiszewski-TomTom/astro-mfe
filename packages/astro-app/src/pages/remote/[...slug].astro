@@ -1,0 +1,13 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Test from "../_React";
+
+const { slug } = Astro.params;
+const { pathname } = Astro.url;
+const baseRoute = pathname.replace(slug ?? "", "");
+---
+
+<Layout title="Remote">
+  <h1 class="text-2xl font-bold mb-3">This is a remote app:</h1>
+  <Test baseRoute={baseRoute} client:only />
+</Layout>
